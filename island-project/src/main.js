@@ -206,12 +206,96 @@ mtlLoader.load('/objs/beachball.mtl', (ballMaterials) => {
   ballLoader.setMaterials(ballMaterials);
 
   ballLoader.load('/objs/beachball.obj', (beachball) => {
-    beachball.position.set(0, 5, 25);
+    beachball.position.set(0, 5, 20);
     scene.add(beachball);
   }, undefined, (error) => {
     console.error('Error loading beach ball OBJ:', error);
   });
 });
+
+//duck
+mtlLoader.load('/objs/Duck.mtl', (duckMaterials) => {
+  duckMaterials.preload();
+
+  const duckLoader = new OBJLoader();
+  duckLoader.setMaterials(duckMaterials);
+
+  duckLoader.load('/objs/Duck.obj', (duck) => {
+    duck.position.set(0, 0, 15);
+    duck.scale.set(0.1, 0.1, 0.1); 
+    scene.add(duck);
+  }, undefined, (error) => {
+    console.error('Error loading duck OBJ:', error);
+  });
+});
+
+//Rock platform
+
+mtlLoader.load('/objs/CavePlatform1.mtl', (platformMaterials) => {
+  platformMaterials.preload();
+
+  const platformLoader = new OBJLoader();
+  platformLoader.setMaterials(platformMaterials);
+
+  platformLoader.load('/objs/CavePlatform1.obj', (platform) => {
+    platform.position.set(-50, 0, -50); 
+    platform.scale.set(0.5, 0.5, 0.5); 
+    scene.add(platform);
+  }, undefined, (error) => {
+    console.error('Error loading CavePlatform1 OBJ:', error);
+  });
+});
+
+//Bushes
+const bushLoader = new OBJLoader();
+bushLoader.load('/objs/Bushes.obj', (bushes) => {
+  bushes.traverse((child) => {
+    if (child.isMesh) {
+      child.material = new THREE.MeshStandardMaterial({ color: 0x228B22 }); // Forest green
+    }
+  });
+
+  bushes.position.set(5, 0, -10); 
+  bushes.scale.set(3, 3, 3);
+  scene.add(bushes);
+}, undefined, (error) => {
+  console.error('Error loading Bushes OBJ:', error);
+});
+
+//Umbrella
+const umbrellaLoader = new OBJLoader();
+umbrellaLoader.load('/objs/Umbrella.obj', (umbrella) => {
+  umbrella.traverse((child) => {
+    if (child.isMesh) {
+      child.material = new THREE.MeshStandardMaterial({ color: 0xffffff }); // Bright red
+    }
+  });
+
+  umbrella.position.set(-10, 0, 15); // Adjust position
+  umbrella.scale.set(3, 3, 3); // Adjust size
+  scene.add(umbrella);
+}, undefined, (error) => {
+  console.error('Error loading Umbrella OBJ:', error);
+});
+
+//Tree
+mtlLoader.load('/objs/3d-model.mtl', (palmTreeMaterials) => {
+  palmTreeMaterials.preload();
+
+  const palmTreeLoader = new OBJLoader();
+  palmTreeLoader.setMaterials(palmTreeMaterials);
+
+  palmTreeLoader.load('/objs/3d-model.obj', (palmTree) => {
+    palmTree.position.set(-15, 0, -5);
+    palmTree.scale.set(0.05, 0.05, 0.05);
+    scene.add(palmTree);
+  }, undefined, (error) => {
+    console.error('Error loading Palmtree OBJ:', error);
+  });
+});
+
+
+
 
 // Boat obj
 let boat = null; //declaring it globally
