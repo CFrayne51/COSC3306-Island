@@ -1,0 +1,42 @@
+# Blender 4.4.1 MTL File: 'None'
+# www.blender.org
+
+newmtl concrete_(Dirty)
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd -s 0.4000001 0.4000001 0.4000001 C:/uhnlfbvn_4K_Albedo.jpg
+map_Ks -s 0.4000001 0.4000001 0.4000001 C:/uhnlfbvn_4K_Specular.jpg
+map_Ns -s 0.4000001 0.4000001 0.4000001 C:/uhnlfbvn_4K_Roughness.jpg
+
+newmtl metals
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl umbrella_fabric
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl umbrella_wood
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:/wood_d.jpg
+map_Ns C:/wood_r.jpg
