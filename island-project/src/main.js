@@ -169,7 +169,7 @@ for (let i = 0; i < 25; i++) { //creating smoke planes
   scene.add(smoke);
   smokeParticles.push(smoke);
 }
-//Campfire obj
+// Campfire obj
 mtlLoader.load('/objs/campfire.mtl', (materials) => {
   materials.preload();
   objLoader.setMaterials(materials);
@@ -182,7 +182,7 @@ mtlLoader.load('/objs/campfire.mtl', (materials) => {
   });
 });
 
-//Coral obj
+// Coral obj
 mtlLoader.load('/objs/coral.mtl', (coralMaterials) => {
   coralMaterials.preload();
 
@@ -198,7 +198,7 @@ mtlLoader.load('/objs/coral.mtl', (coralMaterials) => {
   });
 });
 
-//Beachball obj
+// Beachball obj
 mtlLoader.load('/objs/beachball.mtl', (ballMaterials) => {
   ballMaterials.preload();
 
@@ -213,7 +213,7 @@ mtlLoader.load('/objs/beachball.mtl', (ballMaterials) => {
   });
 });
 
-//duck
+// Duck
 mtlLoader.load('/objs/Duck.mtl', (duckMaterials) => {
   duckMaterials.preload();
 
@@ -230,7 +230,6 @@ mtlLoader.load('/objs/Duck.mtl', (duckMaterials) => {
 });
 
 //Rock platform
-
 mtlLoader.load('/objs/CavePlatform1.mtl', (platformMaterials) => {
   platformMaterials.preload();
 
@@ -271,8 +270,8 @@ umbrellaLoader.load('/objs/Umbrella.obj', (umbrella) => {
     }
   });
 
-  umbrella.position.set(-10, 0, 15); // Adjust position
-  umbrella.scale.set(3, 3, 3); // Adjust size
+  umbrella.position.set(-10, 0, 15);
+  umbrella.scale.set(3, 3, 3);
   scene.add(umbrella);
 }, undefined, (error) => {
   console.error('Error loading Umbrella OBJ:', error);
@@ -293,9 +292,6 @@ mtlLoader.load('/objs/3d-model.mtl', (palmTreeMaterials) => {
     console.error('Error loading Palmtree OBJ:', error);
   });
 });
-
-
-
 
 // Boat obj
 let boat = null; //declaring it globally
